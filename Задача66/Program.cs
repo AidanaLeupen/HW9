@@ -8,11 +8,6 @@ int numberM = Convert.ToInt32(Console.ReadLine());
 Console.Write("Enter number N: "); 
 int numberN = Convert.ToInt32(Console.ReadLine());
 
-void SumMN(int numberM, int numberN)
-{
-    Console.Write(MN(numberM - 1, numberN));
-}
-
 int MN(int numberM, int numberN)
 {
     int result = numberM;
@@ -23,6 +18,11 @@ int MN(int numberM, int numberN)
         result = numberM + MN(numberM, numberN);
         return result;
     }
+}
+
+void SumMN(int numberM, int numberN)
+{
+    Console.Write(MN(numberM - 1, numberN));
 }
 
 SumMN(numberM, numberN);
